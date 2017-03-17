@@ -88,7 +88,7 @@ public class Grafica extends javax.swing.JFrame {
             }
         });
 
-        textoVidas.setText("Vidas: 6");
+        textoVidas.setText("Vidas: 000");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -126,7 +126,7 @@ public class Grafica extends javax.swing.JFrame {
                                     .addGap(0, 0, Short.MAX_VALUE))))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(botonJugar)
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(16, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(142, 142, 142)
                 .addComponent(botonPalabra)
@@ -175,12 +175,12 @@ public class Grafica extends javax.swing.JFrame {
         juego.stringPalabra = textoPalabra.getText();
         textoPalabra.setText("");
         
-        textoPalabra.enable(false);
+        textoPalabra.setEnabled(false);
         botonJugar.setEnabled(false);
         
         juego.iniciar();
         
-        textoVidas.setText("Vidas "+Integer.toString(juego.vidas));
+        textoVidas.setText("Vidas: "+Integer.toString(juego.vidas));
         labelPalabra.setText(juego.mostrarJuego());
         
         textoLetra.setEnabled(true);
@@ -192,7 +192,9 @@ public class Grafica extends javax.swing.JFrame {
     private void botonLetraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonLetraMouseClicked
         // TODO add your handling code here:
         letra = textoLetra.getText().toCharArray();
-        juego.letra = letra[0];
+        if(letra.length == 1){
+            juego.letra = letra[0];
+        }
         
         switch (juego.analizarLetra()){
             case 0:
@@ -225,7 +227,7 @@ public class Grafica extends javax.swing.JFrame {
                 break;
             case 2:
                 labelPalabra.setText(juego.mostrarJuego());
-                textoVidas.setText("Vidas "+Integer.toString(juego.vidas));
+                textoVidas.setText("Vidas: "+Integer.toString(juego.vidas));
                 break;
         }
         textoLetra.setText("");
@@ -267,7 +269,7 @@ public class Grafica extends javax.swing.JFrame {
             case 2:
                 JOptionPane.showMessageDialog(null, "No es la palabra correcta");
                 labelPalabra.setText(juego.mostrarJuego());
-                textoVidas.setText("Vidas "+Integer.toString(juego.vidas));
+                textoVidas.setText("Vidas: "+Integer.toString(juego.vidas));
                 break;
         }
         textoPalabraJugador.setText("");
