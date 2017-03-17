@@ -47,6 +47,7 @@ public class Grafica extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         textoPalabraJugador = new javax.swing.JTextField();
         botonPalabra = new javax.swing.JButton();
+        textoVidas = new javax.swing.JLabel();
 
         jButton1.setText("jButton1");
 
@@ -87,6 +88,8 @@ public class Grafica extends javax.swing.JFrame {
             }
         });
 
+        textoVidas.setText("Vidas: 6");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -96,35 +99,40 @@ public class Grafica extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(155, 155, 155)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(labelPalabra)
-                            .addComponent(jLabel2)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jLabel2)
                             .addGroup(layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jLabel1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(textoPalabra, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addGap(52, 52, 52)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel3)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(botonLetra)
-                                            .addComponent(textoLetra)))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel4)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(textoPalabraJugador, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(0, 0, Short.MAX_VALUE)))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(botonJugar))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(142, 142, 142)
-                        .addComponent(botonPalabra)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(9, 9, 9)
+                                .addComponent(labelPalabra)))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(layout.createSequentialGroup()
+                            .addContainerGap()
+                            .addComponent(jLabel1)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(textoPalabra, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                            .addGap(52, 52, 52)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(jLabel3)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(botonLetra)
+                                        .addComponent(textoLetra)))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(jLabel4)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(textoPalabraJugador, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(0, 0, Short.MAX_VALUE))))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(botonJugar)
+                .addContainerGap(17, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(142, 142, 142)
+                .addComponent(botonPalabra)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(textoVidas)
+                .addGap(56, 56, 56))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -142,22 +150,28 @@ public class Grafica extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(textoLetra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(botonLetra)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(textoPalabraJugador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(botonPalabra)
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(botonLetra)
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel4)
+                            .addComponent(textoPalabraJugador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(botonPalabra)
+                        .addContainerGap(20, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(textoVidas)
+                        .addContainerGap())))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonJugarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonJugarMouseClicked
-        // TODO add your handling code here:
+
         juego.stringPalabra = textoPalabra.getText();
         textoPalabra.setText("");
         
@@ -166,6 +180,7 @@ public class Grafica extends javax.swing.JFrame {
         
         juego.iniciar();
         
+        textoVidas.setText("Vidas "+Integer.toString(juego.vidas));
         labelPalabra.setText(juego.mostrarJuego());
         
         textoLetra.setEnabled(true);
@@ -210,6 +225,7 @@ public class Grafica extends javax.swing.JFrame {
                 break;
             case 2:
                 labelPalabra.setText(juego.mostrarJuego());
+                textoVidas.setText("Vidas "+Integer.toString(juego.vidas));
                 break;
         }
         textoLetra.setText("");
@@ -218,6 +234,43 @@ public class Grafica extends javax.swing.JFrame {
     private void botonPalabraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonPalabraMouseClicked
         // TODO add your handling code here:
         juego.respuesta = textoPalabraJugador.getText();
+        switch(juego.analizarPalabra()){
+            case 0:
+                JOptionPane.showMessageDialog(null, "Perdió!!!\nLa palabra era:\n"+juego.stringPalabra);
+                labelPalabra.setText(juego.mostrarJuego());
+                juego.iniciar();
+                textoPalabra.setEnabled(true);
+                botonJugar.setEnabled(true);
+
+                JOptionPane.showMessageDialog(null, "Ingrese otra palabra");
+
+                textoLetra.enable(false);
+                textoPalabraJugador.setEnabled(false);
+                botonLetra.setEnabled(false);
+                botonPalabra.setEnabled(false);
+                
+                break;
+            case 1:
+                JOptionPane.showMessageDialog(null, "Ganó!!!\nLa palabra era:\n"+juego.stringPalabra);
+                labelPalabra.setText(juego.mostrarJuego());
+                juego.iniciar();
+                textoPalabra.setEnabled(true);
+                botonJugar.setEnabled(true);
+
+                JOptionPane.showMessageDialog(null, "Ingrese otra palabra");
+
+                textoLetra.enable(false);
+                textoPalabraJugador.setEnabled(false);
+                botonLetra.setEnabled(false);
+                botonPalabra.setEnabled(false);
+                break;
+            case 2:
+                JOptionPane.showMessageDialog(null, "No es la palabra correcta");
+                labelPalabra.setText(juego.mostrarJuego());
+                textoVidas.setText("Vidas "+Integer.toString(juego.vidas));
+                break;
+        }
+        textoPalabraJugador.setText("");
     }//GEN-LAST:event_botonPalabraMouseClicked
 
     /**
@@ -269,5 +322,6 @@ public class Grafica extends javax.swing.JFrame {
     private javax.swing.JTextField textoLetra;
     private javax.swing.JTextField textoPalabra;
     private javax.swing.JTextField textoPalabraJugador;
+    private javax.swing.JLabel textoVidas;
     // End of variables declaration//GEN-END:variables
 }

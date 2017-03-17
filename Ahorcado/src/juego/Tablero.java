@@ -65,23 +65,21 @@ public class Tablero {
         return 2;
     }
     
-    boolean analizarPalabra(){
-        int cont=0;
-        for(int i=0; i<caracteres; i++){
-            if(palabra[i]==palabraJugador[i]){
-                cont += 1;
-            }
-        }
-        
-        if (cont==caracteres){
-            return true;
-        }
-        
+    int analizarPalabra(){
         if (stringPalabra.equals(respuesta)){
-            return true;
+            return 1;
         }
         
-        return false;
+        if(stringPalabra.equals(respuesta)==false){
+            respuesta = "";
+            vidas -= 1;
+        }
+        
+        if (vidas==0){
+            return 0;
+        }
+        
+        return 2;
     }
     
     void iniciar(){
